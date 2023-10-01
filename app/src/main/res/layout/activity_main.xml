@@ -6,41 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <SeekBar
-        android:id="@+id/seekBarCelsius"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:max="100"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="259dp"
+        android:layout_height="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <SeekBar
-        android:id="@+id/seekBarFahrenheit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:max="212"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarCelsius" />
+        <SeekBar
+            android:id="@+id/seekBarCelsius"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:max="100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewCelsius"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Celsius: 0°C"
-        app:layout_constraintStart_toStartOf="@+id/seekBarCelsius"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarCelsius" />
+        <SeekBar
+            android:id="@+id/seekBarFahrenheit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:max="212"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCelsius"
+            app:layout_constraintVertical_bias="0.14" />
 
-    <TextView
-        android:id="@+id/textViewFahrenheit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fahrenheit: 32°F"
-        app:layout_constraintStart_toStartOf="@+id/seekBarFahrenheit"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarFahrenheit" />
+        <TextView
+            android:id="@+id/textViewCelsius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius: 0°C"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarCelsius"
+            app:layout_constraintVertical_bias="0.054" />
+
+        <TextView
+            android:id="@+id/textViewFahrenheit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit: 32°F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBarFahrenheit"
+            app:layout_constraintVertical_bias="0.109" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
